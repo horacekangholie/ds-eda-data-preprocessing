@@ -8,9 +8,9 @@ In data analysis and machine learning, outliers are observations that lie unusua
 #### Methods for Checking Outliers
 There are many techniques to identify outliers; here are a few straightforward statistical approaches:
 1.  Statistical checks
-Compute summary measures (mean, standard deviation, quartiles, etc.) and flag values that deviate markedly—e.g. anything several standard deviations from the mean, or outside the interquartile “fences.”
+<br>Compute summary measures (mean, standard deviation, quartiles, etc.) and flag values that deviate markedly—e.g. anything several standard deviations from the mean, or outside the interquartile “fences.”
 2.  Visualization
-Use plots—box plots, histograms overlaid with density curves, or scatter plots—to visually inspect where data points lie relative to the bulk of the distribution.
+<br>Use plots—box plots, histograms overlaid with density curves, or scatter plots—to visually inspect where data points lie relative to the bulk of the distribution.
 
 Statistical Checks
 - `Mean`: The arithmetic average. Points far from the mean may be outliers.
