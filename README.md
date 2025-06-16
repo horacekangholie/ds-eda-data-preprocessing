@@ -1,6 +1,6 @@
-#### EDA - Data Preprocessing
+### EDA - Data Preprocessing
 
-:large_blue_diamond: Detection and Handling of Outliers
+#### Detection and Handling of Outliers
 In data analysis and machine learning, outliers are observations that lie unusually far from the rest of the data—either extremely high or low. Such anomalous values can skew summary statistics or harm model performance, so it’s important to detect and then either remove or correct them during preprocessing. This section introduces several common methods for spotting outliers.
 
 Methods for Checking Outliers
