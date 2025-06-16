@@ -3,6 +3,7 @@
 - [Detection and Handling of Outliers](#️-detection-and-handling-of-outliers)
 
 ### 🗒️ Detection and Handling of Outliers
+-----------------------------
 In data analysis and machine learning, outliers are observations that lie unusually far from the rest of the data—either extremely high or low. Such anomalous values can skew summary statistics or harm model performance, so it’s important to detect and then either remove or correct them during preprocessing. This section introduces several common methods for spotting outliers.
 
 #### Methods for Checking Outliers
@@ -24,6 +25,14 @@ Visualization
 - `CDF` (Cumulative Distribution Function): plots the cumulative proportion of observations, highlighting the tails.
 
 ![Visualization Checks](/assets/visualization_checks.png)
+
+### 🗒️ Methods for Handling Outliers
+-----------------------------
+Once outliers are detected, you can either **replace** them (imputation) or **remove** them.\
+Each strategy has trade-offs:
+-   **Imputation** preserves the record but alters its value.
+-   **Removal** avoids biasing the data but discards the entire row.
+Below are three common imputation rules plus row deletion.
 
 
 
