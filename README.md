@@ -131,31 +131,21 @@ In many datasets you'll encounter **categorical features**---textual labels rath
 
 ### 🗒️ Data Normalization and Standardization
 
-In data science and machine learning, the features of a dataset often originate from different units or scales. Such disparities can cause models to give undue weight to features with larger scales or to converge slowly during training. To eliminate these effects, we perform **normalization** and **standardization**, which make features comparable.
+In data science and machine learning, features often come in different units and scales. These discrepancies can cause some features to dominate others during model training or slow down convergence. To eliminate such issues, we apply **normalization** and **standardization**, making all features comparable.
 
--   **Normalization** rescales the original data to a fixed range, typically [0, 1], without changing the overall shape of the distribution.
+-   **Normalization** rescales each feature into a fixed range (usually [0, 1]) without changing its distribution's shape.
 
--   **Standardization** shifts the data so that it has zero mean and unit variance, which can improve algorithms that assume a Gaussian distribution.
+-   **Standardization** shifts and scales data so it has zero mean and unit variance, which many algorithms assume.
+
 
 **Normalization**
 
-Normalization is a common preprocessing step whose goal is to linearly scale each feature into the [0, 1] interval. This method does not alter the shape of the distribution---only its range---making it useful when features have very different units (for example, pixel intensities in images).
+Normalization (also called min--max scaling) linearly transforms a feature so that its minimum becomes 0 and its maximum becomes 1:
 
-A typical min--max normalization formula is:
+x' = (x - min(x)) / (max(x) - min(x))
 
-x′=x-min⁡(x)max⁡(x)-min⁡(x)x' \;=\; \frac{x - \min(x)}{\max(x) - \min(x)}x′=max(x)-min(x)x-min(x)​
+-   xxx is the original value.
 
-> Min--Max Normalization
+-   x′x'x′ is the normalized value.
 
-Where:
-
--   xxx is an original data point,
-
--   x′x'x′ is the normalized value,
-
--   min⁡(x)\min(x)min(x) and max⁡(x)\max(x)max(x) are the minimum and maximum values of the feature, respectively.
-
-Normalization ensures that all features share a common scale, which can speed up convergence for many machine-learning algorithms and prevent features with large ranges from dominating the model.
-
-
-
+-   min⁡(x)\min(x)min(x) and max⁡(x)\max(x)max(x) are the feature's minimum and maximum, respectively.
