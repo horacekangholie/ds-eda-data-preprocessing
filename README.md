@@ -243,3 +243,26 @@ Scaling (normalization or standardization) is thus a critical step both during d
 ### 🗒️ Feature Scaling and Transformation
 
 In this section, we’ll use the Iris dataset as a running example to demonstrate how to apply various preprocessing methods in Python. The sklearn.preprocessing module provides tools for normalization, standardization, and more. We’ll show how to load the Iris data, apply each scaler, and prepare the features for machine-learning models.
+
+##### MinMaxScaler
+
+MinMaxScaler rescales each feature into a given range (default is [0, 1]). It maps the minimum of each feature to 0 and its maximum to 1, with a linear transformation for all intermediate values.
+
+##### MaxAbs Scaler (Maximum Absolute Value Scaling)
+
+MaxAbsScaler scales each feature by its maximum absolute value, so that after transformation all values lie in [−1,1][−1,1]. Unlike min–max scaling, it does not shift data—only scales by the feature’s largest magnitude.
+
+#### Standard Scaler (Mean & Variance Standardization)
+
+StandardScaler standardizes each feature by removing its mean and scaling to unit variance, so that the resulting distribution has mean 0 and standard deviation 1. This is especially useful when features are roughly Gaussian or when models assume centered inputs.
+
+#### Robust Scaler (Median & IQR Standardization)
+
+The RobustScaler scales each feature so that its median becomes 0 and its interquartile range (IQR = Q3 – Q1) becomes 1. Because it uses the median and IQR—both robust statistics—it is far less sensitive to outliers than standard z-score scaling.
+
+
+#### fit_transform() VS transform() 
+
+- `fit_transform()` - on training data (learns and applies parameters)
+
+- `transform()` - on test/new data (applies the same parameters)
