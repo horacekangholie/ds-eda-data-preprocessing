@@ -1,6 +1,7 @@
 ## 📚 EDA - Data Preprocessing
 
 - [Detection and Handling of Outliers](#️-detection-and-handling-of-outliers)
+- [Handling Missing Values](#️-handling-missing-values)
 
 
 -----------------------------
@@ -57,3 +58,23 @@ Use the **mode** (most frequent value) to replace outliers. Works well for categ
 **Row Removal**
 
 If outliers are numerous or widely scattered, you may choose to remove those entire records at once. This avoids imputation bias but discards potentially useful data.
+
+Data Cleaning and Preprocessing
+
+### 🗒️ Handling Missing Values
+
+Processing missing data is a critical step in data analysis and machine learning, because missing entries can undermine model performance and reliability. Much like outlier treatment in previous section, you can either **impute** missing values or **drop** them entirely, depending on the situation and the proportion of missingness. Common imputation strategies include median, mean, and mode; we'll illustrate a few of them in this chapter.
+
+### 🗒️ Handling Categorical Data
+
+In many datasets you'll encounter **categorical features**---textual labels rather than numbers. Models require numeric input, so we must convert categories into numeric codes or dummy vectors. Common techniques include:
+
+-   **Label Encoding:** map each category to a unique integer (no ordinal meaning).
+
+-   **Ordinal Encoding:** assign integers to categories that do have a natural order.
+
+-   **One-Hot Encoding:** create binary indicator columns for each category.
+
+-   **Frequency Encoding:** replace categories with their occurrence counts or frequencies.
+
+-   **Feature Combinations:** engineer new categorical features by combining existing ones.
