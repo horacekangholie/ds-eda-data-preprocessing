@@ -127,3 +127,35 @@ In many datasets you'll encounter **categorical features**---textual labels rath
 -   **Frequency Encoding:** replace categories with their occurrence counts or frequencies.
 
 -   **Feature Combinations:** engineer new categorical features by combining existing ones.
+
+
+### 🗒️ Data Normalization and Standardization
+
+In data science and machine learning, the features of a dataset often originate from different units or scales. Such disparities can cause models to give undue weight to features with larger scales or to converge slowly during training. To eliminate these effects, we perform **normalization** and **standardization**, which make features comparable.
+
+-   **Normalization** rescales the original data to a fixed range, typically [0, 1], without changing the overall shape of the distribution.
+
+-   **Standardization** shifts the data so that it has zero mean and unit variance, which can improve algorithms that assume a Gaussian distribution.
+
+**Normalization**
+
+Normalization is a common preprocessing step whose goal is to linearly scale each feature into the [0, 1] interval. This method does not alter the shape of the distribution---only its range---making it useful when features have very different units (for example, pixel intensities in images).
+
+A typical min--max normalization formula is:
+
+x′=x-min⁡(x)max⁡(x)-min⁡(x)x' \;=\; \frac{x - \min(x)}{\max(x) - \min(x)}x′=max(x)-min(x)x-min(x)​
+
+> Min--Max Normalization
+
+Where:
+
+-   xxx is an original data point,
+
+-   x′x'x′ is the normalized value,
+
+-   min⁡(x)\min(x)min(x) and max⁡(x)\max(x)max(x) are the minimum and maximum values of the feature, respectively.
+
+Normalization ensures that all features share a common scale, which can speed up convergence for many machine-learning algorithms and prevent features with large ranges from dominating the model.
+
+
+
