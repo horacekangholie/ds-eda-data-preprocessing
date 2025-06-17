@@ -2,8 +2,10 @@
 
 - [Detection and Handling of Outliers](#️-detection-and-handling-of-outliers)
 
-### 🗒️ Detection and Handling of Outliers
 -----------------------------
+
+### 🗒️ Detection and Handling of Outliers
+
 In data analysis and machine learning, outliers are observations that lie unusually far from the rest of the data—either extremely high or low. Such anomalous values can skew summary statistics or harm model performance, so it’s important to detect and then either remove or correct them during preprocessing. This section introduces several common methods for spotting outliers.
 
 #### Methods for Checking Outliers
@@ -30,7 +32,7 @@ Visualization
 ![Visualization Checks](/assets/visualization_checks.png)
 
 ### 🗒️ Methods for Handling Outliers
------------------------------
+
 Once outliers are detected, you can either **replace** them (imputation) or **remove** them.\
 
 Each strategy has trade-offs:
@@ -39,5 +41,14 @@ Each strategy has trade-offs:
 
 Below are three common imputation rules plus row deletion.
 
+#### Median Imputation
+Use the **median** of the variable to replace any outliers. This is robust because the median itself isn't skewed by extremes.
 
+#### Mean Imputation
+Replace outliers with the **mean**. Suitable when data are symmetrically distributed---but beware that the mean itself is influenced by extremes.
 
+#### Mode Imputation
+Use the **mode** (most frequent value) to replace outliers. Works well for categorical data or numeric data with a clear peak.
+
+#### Row Removal
+If outliers are numerous or widely scattered, you may choose to remove those entire records at once. This avoids imputation bias but discards potentially useful data.
