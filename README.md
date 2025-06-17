@@ -146,8 +146,8 @@ $$
 x' = \frac{x - \min(x)}{\max(x) - \min(x)}
 $$
 
--   xxx is the original value.
+-   $x$ is the original value.
 
--   x′x'x′ is the normalized value.
+-   $x'$ is the normalized value.
 
--   min⁡(x)\min(x)min(x) and max⁡(x)\max(x)max(x) are the feature's minimum and maximum, respectively.
+-   $min⁡(x)\min(x)min(x)$ and $max⁡(x)\max(x)max(x)$ are the feature's minimum and maximum, respectively.
