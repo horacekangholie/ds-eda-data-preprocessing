@@ -62,6 +62,7 @@ If outliers are numerous or widely scattered, you may choose to remove those ent
 
 Data Cleaning and Preprocessing
 
+
 ### 🗒️ Handling Missing Values
 
 Processing missing data is a critical step in data analysis and machine learning, because missing entries can undermine model performance and reliability. Much like outlier treatment in previous section, you can either **impute** missing values or **drop** them entirely, depending on the situation and the proportion of missingness. Common imputation strategies include median, mean, and mode.
@@ -111,6 +112,7 @@ Beyond median and mean, you can also consider:
 -   **Random-sample imputation** (draw from the distribution of observed values)
 
 -   **Multiple imputation** (use statistical models to generate several plausible imputations)
+
 
 ### 🗒️ Handling Categorical Data
 
