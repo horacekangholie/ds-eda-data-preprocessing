@@ -3,6 +3,8 @@
 - [Detection and Handling of Outliers](#️-detection-and-handling-of-outliers)
 - [Handling Missing Values](#️-handling-missing-values)
 - [Handling Categorical Data](#️-handling-categorical-data)
+- [Normalization and Standardization](#️-data-normalization-and-standardization)
+- [Feature Scaling and Transformation](#️-feature-scaling-and-transformation)
 
 
 -----------------------------
@@ -142,13 +144,11 @@ In data science and machine learning, features often come in different units and
 
 Normalization (also called min--max scaling) linearly transforms a feature so that its minimum becomes 0 and its maximum becomes 1:
 
-
+> Equation 1 Min–Max Normalization
 
 $$
 x′ = \frac{x - \min(x)}{\max(x) - \min(x)}
 $$
-
-> quation 1 Min–Max Normalization
 
 - $x$ is the original value.
 
@@ -164,11 +164,11 @@ Standardization is another key preprocessing technique whose goal is to transfor
 
 A common “z-score” standardization formula is:
 
+> Equation 2 Mean & variance (z-score) standardization
+
 $$
 x' = \frac{x−μ}{σ}
 $$
-
-> Equation 2 Mean & variance (z-score) standardization
 
 - $x$ is an original data point
 
@@ -221,7 +221,7 @@ Scaling (normalization or standardization) is thus a critical step both during d
 
 - **Neural Networks**: Standardized inputs stabilize training and help the network converge faster.
 
-**Dimensionality-Reduction Algorithms**
+**Dimensionality-Reduction algorithms**
 
 - **Principal Component Analysis (PCA)**: A widely used linear method that projects data onto orthogonal "principal components." Before applying PCA, you should standardize features so that each has the same scale---otherwise large-scale features dominate the component calculations.
 
@@ -238,3 +238,8 @@ Scaling (normalization or standardization) is thus a critical step both during d
 - **Random Forests**: An ensemble of decision trees---also scale-invariant.
 
 - **Gradient Boosting Machines** (GBM; e.g. XGBoost, LightGBM, CatBoost): Since they build decision trees, they too do not require feature scaling.
+
+
+### 🗒️ Feature Scaling and Transformation
+
+In this section, we’ll use the Iris dataset as a running example to demonstrate how to apply various preprocessing methods in Python. The sklearn.preprocessing module provides tools for normalization, standardization, and more. We’ll show how to load the Iris data, apply each scaler, and prepare the features for machine-learning models.
