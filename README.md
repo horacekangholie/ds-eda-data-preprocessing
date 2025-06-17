@@ -142,7 +142,9 @@ In data science and machine learning, features often come in different units and
 
 Normalization (also called min--max scaling) linearly transforms a feature so that its minimum becomes 0 and its maximum becomes 1:
 
-x' = (x - min(x)) / (max(x) - min(x))
+$$
+x' = \frac{x - \min(x)}{\max(x) - \min(x)}
+$$
 
 -   xxx is the original value.
 
